@@ -1,0 +1,184 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    color: white;
+}
+
+:root {
+    --master-text-shadow: 5px 5px 6px rgb(156, 155, 187);
+    --master-box-shadow: -2px 2px 15px 14px rgb(156, 155, 187);
+    --logo-on-hover: 6px 6px 7px rgb(156, 155, 187);
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    background:  url(../assets/website-background-image-size-psd-vector-photo.jpg) no-repeat fixed;
+}
+
+strong {
+    font-size: 1.3rem;
+}
+
+/* background animation
+body {
+    animation: scroll 70s linear infinite;
+    background: url("https://www.ppt-backgrounds.net/thumbs/gradient-blue-glitter-blue-pattern---clipart-image.jpeg");
+    color: #eee;
+    height: 100vh;
+    min-width: 360px;
+    width: 100%;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    z-index: -1; 
+}
+
+@keyframes scroll {
+    100%{
+     background-position:0px -3000px;
+   }
+ }
+ 
+ @media (prefers-reduced-motion) {
+   body {
+     animation: scroll 200s linear infinite;
+   }
+}
+
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%; 
+    z-index: -1;   
+} */
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+header {
+    margin-bottom: 6vw;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+header li:nth-of-type(1) {
+    margin-right: auto;
+}
+
+header li:not(li:nth-of-type(1)){
+    transition: 400ms ease-in-out;
+    padding: 0 3% 0 3%;
+}
+
+header li, a {
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    transition: 400ms linear;
+    cursor: pointer;
+}
+
+header li:not(li:nth-of-type(1)):hover{
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: var(--master-text-shadow);
+    transform: translate(0,-5px);
+}
+
+.highlight {
+   
+    text-align: center;
+    text-shadow: var(--master-text-shadow);
+    transition: text-shadow 400ms ease-in-out;
+}
+
+.highlight:hover {
+    text-shadow: var(--logo-on-hover);
+}
+
+
+.tv-title {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.grid  {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(200px, 13vh));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 126vh));
+    gap: 1rem 1rem;
+}
+
+.tv-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 400ms ease-in-out;
+    cursor: pointer;
+}
+
+.tv-container:hover {
+    /* background-color: rgba(0,0,0,0.5); */
+    -webkit-box-shadow: -2px 2px 15px 14px rgba(120, 110, 255);
+    -moz-box-shadow: -2px 2px 15px 14px rgba(120, 110, 255);
+    box-shadow: var(--master-box-shadow);
+    transform: translate(18px,0);
+}
+
+.image, .description{
+    padding: 2rem;
+}
+
+.image img {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+
+    .container, header nav, header nav ul, header nav li, header li, header li a {
+        text-align:center;
+        width:100%;
+        margin: 0;
+    }
+
+    .tv-container, .description {
+        width: 100vw;
+        margin: 0;
+    } 
+}
+
+ @media (max-width: 588px) {
+
+    header li, header ul{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .tv-container, .description  {
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+}

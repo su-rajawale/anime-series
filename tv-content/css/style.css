@@ -1,0 +1,221 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    color: #fff;
+}
+
+:root {
+    --master-text-shadow: 5px 5px 6px rgb(156, 155, 187);
+    --master-box-shadow: -2px 2px 15px 14px rgb(156, 155, 187);
+    --logo-on-hover: 6px 6px 7px rgb(156, 155, 187);
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    background: url(../../assets/website-background-image-size-psd-vector-photo.jpg) no-repeat fixed;
+}
+
+    /* background animation 
+    animation: scroll 70s linear infinite;
+    background: url("https://www.ppt-backgrounds.net/thumbs/gradient-blue-glitter-blue-pattern---clipart-image.jpeg");
+    color: #eee;
+    height: 100vh;
+    min-width: 360px;
+    width: 100%;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    z-index: -1;
+}
+
+/* #bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%; 
+    z-index: -1;   
+
+
+@keyframes scroll {
+    100%{
+     background-position:0px -3000px;
+   }
+ }
+  
+ 
+ @media (prefers-reduced-motion) {
+   body {
+     animation: scroll 200s linear infinite;
+   }
+ }*/
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+header {
+    margin-bottom: 9%;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+header li:nth-of-type(1) {
+    margin-right: auto;
+}
+
+header li:not(li:nth-of-type(1)){
+    transition: 400ms ease-in-out;
+    padding: 0 3% 0 3%;
+}
+
+header li, a {
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 400ms linear;
+    cursor: pointer;
+}
+
+header li:not(li:nth-of-type(1)):hover{
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: var(--master-text-shadow);
+    transform: translate(0,-5px);
+}
+
+.highlight {
+    text-align: center;
+    text-shadow: var(--master-text-shadow);
+    transition: 400ms ease-in-out;
+}
+
+.highlight:hover {
+    text-shadow: var(--logo-on-hover);
+}
+
+
+article {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.poster {
+    align-self: center;
+    justify-self: center;
+}
+
+.poster img {
+    width: 15vw;
+    height: 20vw;
+    border-radius: 8px;
+}
+
+.main h1 {
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#hero-paragraph {
+    padding-top: 0;
+}
+
+#hero-paragraph p{
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.scta {
+    width: auto;
+    margin-top: 3%;
+}
+
+.cta a{
+    background-color: #000080;
+    color: white;
+    padding: 0.8em 1.1em;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta a:hover {
+    background-color: #00004d;
+}
+
+.cta::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 768px) {
+            body {
+                    text-align:center;
+                    width:100%;
+                    margin: 0;
+                    padding: 0;
+            }
+
+            .container, header nav, header nav ul, header nav li, header li, header li a, .scta, #hero-paragraph, #hero-paragraph p {
+                    text-align:center;
+                    width:100%;
+                    width: 95%;
+                    margin: 0 auto;
+                    /*margin: 0;
+                    padding: 0;*/
+            }
+
+            .scta { 
+                    margin-top: 10%;
+            }
+
+            article {
+                    display: block;
+            }
+
+            .poster {
+                    margin-top: 10vw;
+            }
+
+            .poster img {
+                    width: 100%;
+                    height: auto;
+            }
+        }
+
+ @media screen and (max-width: 588px){
+
+            .container, header li, header ul{
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 auto;
+            }
+
+            .scta {
+                    margin-top:10%; 
+            }
+
+            article {
+                display: block;
+            }
+
+            .poster {
+                margin-top: 10vw;
+            }
+
+            .poster img {
+                width: 100%;
+                height: auto;
+            }
+        }
